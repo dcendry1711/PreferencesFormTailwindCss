@@ -10,16 +10,16 @@
             <h1 class="text-6xl font-bold font-serif ">Leaf &amp; Brew Box</h1>
             <h2 class="py-2 font-bold text-xl">Preferences</h2>
             
-            <form>
+            <form class="bg-white p-2">
                 
                 <!-- SUBSCRIPTION -->
-                <fieldset>
-                    <legend>Subscription</legend>
+                <fieldset class="flex flex-col gap-4">
+                    <legend class="text-lg font-bold my-2">Subscription</legend>
                     
                     <!-- SUBSCRIPTION TIER -->
                     <section>
-                        <label>Subscription Tier</label>
-                        <select>
+                        <label class="text-black font-bold">Subscription Tier</label>
+                        <select class="border-2 border-yellow-300 p-1">
                             <option>Basic (1 tea per month)</option>
                             <option>Standard (3 teas per month)</option>
                             <option>Deluxe (5 teas per month)</option>
@@ -28,74 +28,74 @@
                     
                     <!-- TASTE PREFERENCE -->
                     <section>
-                        <p>Taste Preference</p>
+                        <p class="text-black font-bold">Taste Preference</p>
                         <section>
                             <section>
                                 <input type="checkbox" id="fruity" name="fruity"/>
-                                <label for="fruity">Fruity</label>
+                                <label class="font-medium" for="fruity">Fruity</label>
                             </section>
                             <section>
                                 <input type="checkbox" id="floral" name="floral"/>
-                                <label for="floral">Floral</label>
+                                <label class="font-medium" for="floral">Floral</label>
                             </section>
                             <section>
                                 <input type="checkbox" id="sweet" name="sweet"/>
-                                <label for="sweet">Sweet</label>
+                                <label class="font-medium" for="sweet">Sweet</label>
                             </section>
                         </section>
                     </section>
                     
                     <!-- LOOSE OR BAGGED -->
                     <section>
-                        <p>Loose Leaf or Bagged?</p>
+                        <p class="text-black font-bold">Loose Leaf or Bagged?</p>
                         <section>
                             <section>
                                 <input type="radio" id="loose" name="tea-preference"/>
-                                <label for="loose">Loose</label>
+                                <label class="font-medium" for="loose">Loose</label>
                             </section>
                             <section>
                                 <input type="radio" id="bagged" name="tea-preference"/>
-                                <label for="bagged">Bagged</label>
+                                <label class="font-medium" for="bagged">Bagged</label>
                             </section>
                             <section>
                                 <input type="radio" id="either" name="tea-preference"/>
-                                <label for="either">Either</label>
+                                <label class="font-medium" for="either">Either</label>
                             </section>
                         </section>
                     </section>
                     
                     <!-- DIETARY RESTRICTIONS -->
-                    <section>
-                        <label for="delivery_instructions">Dietary Restrictions</label>
-                        <textarea id="delivery_instructions"></textarea>
+                    <section class="flex flex-col">
+                        <label class="text-black font-bold" for="delivery_instructions">Dietary Restrictions</label>
+                        <textarea class="border-2 border-yellow-300 h-20 mb-8" id="delivery_instructions"></textarea>
                     </section>
                     
                 </fieldset>
                 
                 <!-- CUSTOMER DETAILS -->
-                <fieldset>
-                    <legend>Details</legend>
+                <fieldset class="flex flex-col gap-4">
+                    <legend class="text-lg font-bold my-2">Details</legend>
                     
                     <!-- NAME -->
-                    <section>
-                        <label>Full Name</label>
-                        <input type="text" value="Earl Greyson"/>
+                    <section class="flex flex-col">
+                        <label class="text-black font-bold">Full Name</label>
+                        <input class="border-2 border-yellow-300 p-1" type="text" value="Earl Greyson"/>
                     </section>
                     
                     <!-- EMAIL -->
-                    <section>
-                        <label>Email</label>
-                        <input type="email" value="earlgreyson@tealovers.com"/>
+                    <section class="flex flex-col">
+                        <label class="text-black font-bold">Email</label>
+                        <input class="border-2 border-yellow-300 p-1" type="email" value="earlgreyson@tealovers.com"/>
                     </section>
                     
                     <!-- DELIVERY -->
                     <section>
-                        <h3>Delivery Address</h3>
-                        <section>
+                        <h3 class="text-black font-bold">Delivery Address</h3>
+                        <section class="border-2 border-yellow-300 p-2 rounded-xl">
                             <p>12 Brewster Lane</p>
                             <p>Steepville</p>
-                            <p>TE 67894</p>
-                            <a href="#">Change address</a>
+                            <p class="pb-1">TE 67894</p>
+                            <a class="underline text-sm text-yellow-600" href="#">Change address</a>
                         </section>
                     </section>
                     
