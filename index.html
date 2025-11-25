@@ -6,71 +6,75 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="h-min-screen bg-yellow-100 text-yellow-900">
-        <main class="flex flex-col p-2 gap-2">
+        <main class="flex flex-col p-2 gap-2 md:w-[900px] mx-auto">
             <h1 class="text-[62px] font-serif font-bold leading-none mr-6">Leaf &amp; Brew Box</h1>
             <h2 class="text-[20px] text-yellow-800 font-bold">Preferences</h2>
             
             <form class="bg-white px-2 pt-2 pb-4">
-
+                
                 <!-- SUBSCRIPTION -->
-                <fieldset class="flex flex-col gap-2 relative">
+                <fieldset class="flex flex-col gap-2 relative md:relative">
                     <legend class="text-yellow-700 text-xl font-bold pb-2">Subscription</legend>
 
                     <!-- FORM ICON -->
-                <svg class="fill-yellow-800 absolute z-999 bottom-[370px] left-[265px]" xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 -960 960 960" width="100px"><path d="M160-120v-80h640v80H160Zm560-520h80v-120h-80v120ZM320-280q-66 0-113-47t-47-113v-400h200v96l-72 58q-2 2-8 16v170q0 8 6 14t14 6h160q8 0 14-6t6-14v-170q0-2-8-16l-72-58v-96h400q33 0 56.5 23.5T880-760v120q0 33-23.5 56.5T800-560h-80v120q0 66-47 113t-113 47H320Z"/></svg>
+                <svg class="fill-yellow-800 absolute z-999 bottom-[370px] left-[265px] md:absolute z-1000 top-[-95px] left-[780px]" xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 -960 960 960" width="100px"><path d="M160-120v-80h640v80H160Zm560-520h80v-120h-80v120ZM320-280q-66 0-113-47t-47-113v-400h200v96l-72 58q-2 2-8 16v170q0 8 6 14t14 6h160q8 0 14-6t6-14v-170q0-2-8-16l-72-58v-96h400q33 0 56.5 23.5T880-760v120q0 33-23.5 56.5T800-560h-80v120q0 66-47 113t-113 47H320Z"/></svg>
                     
-                    <!-- SUBSCRIPTION TIER -->
-                    <section class="flex flex-col">
-                        <label class="text-black font-bold">Subscription Tier</label>
-                        <select class="text-black border-2 border-yellow-300 p-2">
-                            <option>Basic (1 tea per month)</option>
-                            <option>Standard (3 teas per month)</option>
-                            <option>Deluxe (5 teas per month)</option>
-                        </select>
-                    </section>
-                    
-                    <!-- TASTE PREFERENCE -->
-                    <section>
-                        <p class="text-black font-bold">Taste Preference</p>
-                        <section class="text-black">
-                            <section>
-                                <input type="checkbox" id="fruity" name="fruity"/>
-                                <label for="fruity">Fruity</label>
-                            </section>
-                            <section>
-                                <input type="checkbox" id="floral" name="floral"/>
-                                <label for="floral">Floral</label>
-                            </section>
-                            <section>
-                                <input type="checkbox" id="sweet" name="sweet"/>
-                                <label for="sweet">Sweet</label>
+                <section class="md:grid grid-cols-2 gap-x-4">
+
+                        <!-- SUBSCRIPTION TIER -->
+                        <section class="flex flex-col">
+                            <label class="text-black font-bold">Subscription Tier</label>
+                            <select class="text-black border-2 border-yellow-300 p-2">
+                                <option>Basic (1 tea per month)</option>
+                                <option>Standard (3 teas per month)</option>
+                                <option>Deluxe (5 teas per month)</option>
+                            </select>
+                        </section>
+                        
+                        <!-- TASTE PREFERENCE -->
+                        <section>
+                            <p class="text-black font-bold">Taste Preference</p>
+                            <section class="text-black">
+                                <section>
+                                    <input type="checkbox" id="fruity" name="fruity"/>
+                                    <label for="fruity">Fruity</label>
+                                </section>
+                                <section>
+                                    <input type="checkbox" id="floral" name="floral"/>
+                                    <label for="floral">Floral</label>
+                                </section>
+                                <section>
+                                    <input type="checkbox" id="sweet" name="sweet"/>
+                                    <label for="sweet">Sweet</label>
+                                </section>
                             </section>
                         </section>
-                    </section>
-                    
-                    <!-- LOOSE OR BAGGED -->
-                    <section>
-                        <p class="text-black font-bold">Loose Leaf or Bagged?</p>
-                        <section class="text-black">
-                            <section>
-                                <input type="radio" id="loose" name="tea-preference"/>
-                                <label for="loose">Loose</label>
-                            </section>
-                            <section>
-                                <input type="radio" id="bagged" name="tea-preference"/>
-                                <label for="bagged">Bagged</label>
-                            </section>
-                            <section>
-                                <input type="radio" id="either" name="tea-preference"/>
-                                <label for="either">Either</label>
+                        
+                        <!-- LOOSE OR BAGGED -->
+                        <section class="md:col-start-2">
+                            <p class="text-black font-bold">Loose Leaf or Bagged?</p>
+                            <section class="text-black">
+                                <section>
+                                    <input type="radio" id="loose" name="tea-preference"/>
+                                    <label for="loose">Loose</label>
+                                </section>
+                                <section>
+                                    <input type="radio" id="bagged" name="tea-preference"/>
+                                    <label for="bagged">Bagged</label>
+                                </section>
+                                <section>
+                                    <input type="radio" id="either" name="tea-preference"/>
+                                    <label for="either">Either</label>
+                                </section>
                             </section>
                         </section>
-                    </section>
-                    
-                    <!-- DIETARY RESTRICTIONS -->
-                    <section class="flex flex-col">
-                        <label class="text-black font-bold" for="delivery_instructions">Dietary Restrictions</label>
-                        <textarea class="border-2 border-yellow-300 p-2" id="delivery_instructions"></textarea>
+
+                        <!-- DIETARY RESTRICTIONS -->
+                        <section class="flex flex-col md:col-start-1 row-start-2">
+                            <label class="text-black font-bold" for="delivery_instructions">Dietary Restrictions</label>
+                            <textarea class="border-2 border-yellow-300 p-2 md:focus:border-4 focus:border-green-400 focus:bg-yellow-100" id="delivery_instructions"></textarea>
+                        </section>
+
                     </section>
                     
                 </fieldset>
@@ -84,49 +88,53 @@
                         <svg class="fill-yellow-800" xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"><path d="M240-160q-50 0-85-35t-35-85H40v-440q0-33 23.5-56.5T120-800h560v160h120l120 160v200h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85H360q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T280-280q0-17-11.5-28.5T240-320q-17 0-28.5 11.5T200-280q0 17 11.5 28.5T240-240Zm480 0q17 0 28.5-11.5T760-280q0-17-11.5-28.5T720-320q-17 0-28.5 11.5T680-280q0 17 11.5 28.5T720-240Zm-40-200h170l-90-120h-80v120Z"/></svg>
                     </section>
 
-                    <!-- NAME -->
-                    <section class="flex flex-col">
-                        <label class="text-black font-bold">Full Name</label>
-                        <input class="text-black border-2 border-yellow-300 p-2" type="text" value="Earl Greyson"/>
-                    </section>
-                    
-                    <!-- EMAIL -->
-                    <section class="flex flex-col">
-                        <label class="text-black font-bold">Email</label>
-                        <input class="text-black border-2 border-yellow-300 p-2" type="email" value="earlgreyson@tealovers.com"/>
-                    </section>
-                    
-                    <!-- DELIVERY -->
-                    <section>
-                        <h3 class="text-black font-bold">Delivery Address</h3>
-                        <section class="text-black border-2 border-yellow-300 p-2 rounded-xl">
-                            <p>12 Brewster Lane</p>
-                            <p>Steepville</p>
-                            <p>TE 67894</p>
-                            <a class="underline text-sm text-yellow-800 font-semibold" href="#">Change address</a>
+                    <section class="md:grid grid-cols-2 gap-x-4">
+
+                        <!-- NAME -->
+                        <section class="flex flex-col">
+                            <label class="text-black font-bold">Full Name</label>
+                            <input class="text-black border-2 border-yellow-300 p-2" type="text" value="Earl Greyson"/>
                         </section>
-                    </section>
-                    
-                    <!-- PAYMENT -->
-                    <section>
-                        <h3 class="text-black font-bold">Payment Method</h3>
-                        <section class="border-2 border-yellow-300 p-2 rounded-xl">
-                            <section class="flex justify-between items-center">
-                                <p>....8523</p>
-                                <section class="flex">
-                                    <img class="w-[45px] h-[30px]" src="img/logo_visa.png" alt="visa"/>
-                                    <img class="w-[45px] h-[30px] opacity-50" src="img/logo_mastercard.png" alt="mastercard"/>
-                                </section>
+                        
+                        <!-- EMAIL -->
+                        <section class="flex flex-col">
+                            <label class="text-black font-bold">Email</label>
+                            <input class="text-black border-2 border-yellow-300 p-2" type="email" value="earlgreyson@tealovers.com"/>
+                        </section>
+                        
+                        <!-- DELIVERY -->
+                        <section>
+                            <h3 class="text-black font-bold">Delivery Address</h3>
+                            <section class="text-black border-2 border-yellow-300 p-2 rounded-xl md:hover:bg-yellow-100">
+                                <p>12 Brewster Lane</p>
+                                <p>Steepville</p>
+                                <p>TE 67894</p>
+                                <a class="underline text-sm text-yellow-800 font-semibold" href="#">Change address</a>
                             </section>
-                            <a class="underline text-sm text-yellow-800 font-semibold" href="#">Change payment method</a>
                         </section>
+                        
+                        <!-- PAYMENT -->
+                        <section>
+                            <h3 class="text-black font-bold">Payment Method</h3>
+                            <section class="border-2 border-yellow-300 p-2 rounded-xl md:hover:bg-yellow-100">
+                                <section class="flex justify-between items-center">
+                                    <p>....8523</p>
+                                    <section class="flex">
+                                        <img class="w-[45px] h-[30px]" src="img/logo_visa.png" alt="visa"/>
+                                        <img class="w-[45px] h-[30px] opacity-50" src="img/logo_mastercard.png" alt="mastercard"/>
+                                    </section>
+                                </section>
+                                <a class="underline text-sm text-yellow-800 font-semibold" href="#">Change payment method</a>
+                            </section>
+                        </section>
+
                     </section>
                     
                 </fieldset>
                 
                 <section class="flex justify-center">
                     <!-- SAVE BUTTON -->
-                    <input class="w-full mt-4 py-4 bg-yellow-800 text-white font-bold rounded-2xl" type="submit" value="Save Preferences"/>
+                    <input class="w-full mt-4 py-4 bg-yellow-800 text-white font-bold rounded-2xl md:cursor-pointer" type="submit" value="Save Preferences"/>
                 </section>
 
             </main>
